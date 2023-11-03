@@ -1,0 +1,20 @@
+-- Skema tabel admin
+CREATE TABLE IF NOT EXISTS admin (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nim VARCHAR(10) UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+-- Skema tabel users
+CREATE TABLE IF NOT EXISTS users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nim VARCHAR(10) UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+-- Skema tabel voting_boxes
+CREATE TABLE IF NOT EXISTS voting_boxes (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  votes INT DEFAULT 0
+);
